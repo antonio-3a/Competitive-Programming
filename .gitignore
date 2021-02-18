@@ -1,6 +1,8 @@
 # IDE - VSCode
 .vscode/*
 
+# IDE - Jetbrains
+.idea
+
 # 3A
 Code/*
-
