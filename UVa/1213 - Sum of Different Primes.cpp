@@ -19,8 +19,8 @@ int main()
     int n = 1120, k, NK[n+1][15];
     bool P[n+1];
     memset(P, 0, sizeof P);
-    memset(NK, -1, sizeof NK);
-    NK[0][0] = 0;
+    memset(NK, 0, sizeof NK);
+    NK[0][0] = 1;
     ccl(i, 2, n)
     {
         if(P[i]) continue;
@@ -29,11 +29,10 @@ int main()
         
         for(int j = n; j >= i; j--)
             ccl(k, 1, 14)
-                if(NK[j-i][k-1] > -1)
-                    NK[j][k] += NK[j-i][k-1]+1;
+                NK[j][k] += NK[j-i][k-1];
     }
     while (cin >> n >> k and n and k)
-        cout << NK[n][k]+1 << "\n";
+        cout << NK[n][k] << "\n";
     
     return 0;
 }
