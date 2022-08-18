@@ -10,8 +10,8 @@ using namespace std;
 using namespace __gnu_pbds;
 
 #define fIO ios::sync_with_stdio(0); cin.tie(0);
-#define in freopen("input.in", "r", stdin);
-#define out freopen("output.out", "w", stdout);
+#define in freopen("input.txt", "r", stdin);
+#define out freopen("output.txt", "w", stdout);
 #define ccl(i, begin, end) for(auto i = begin; i < end; i ++)
 
 typedef long long ll;
